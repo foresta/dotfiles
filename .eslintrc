@@ -1,0 +1,21 @@
+{
+    "env": {
+        "node": true,
+        "es6": true,
+        "browser": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "arrowFunctions": true
+        }
+    },
+   "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/jsx-uses-vars": 1
+    },
+}   
