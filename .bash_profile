@@ -21,4 +21,4 @@ export COCOS_TEMPLATES_ROOT="$HOME/Library/Cocos2d-x/cocos2d-x-3.9/templates"
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # go lang
-export  PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/opt/go/bin
