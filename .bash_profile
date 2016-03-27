@@ -22,3 +22,5 @@ export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # go lang
 export PATH=$PATH:/opt/go/bin
+export GOPATH=$HOME/Work/go
+export PATH=$PATH:$GOPATH/bin
