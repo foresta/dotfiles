@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/kazuki.morita/Work/private/redux/examples/todos'
 let g:netrw_dirhist_2='/Users/kazuki.morita/Work/private/redux/examples/todos/components'
 let g:netrw_dirhist_3='/Users/kazuki.morita/Work/private/redux/examples/todos'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/kazuki.morita/Work/private/redux/examples/todos'
 let g:netrw_dirhist_6='/Users/kazuki.morita/Work/private/redux/examples/todos/components'
 let g:netrw_dirhist_7='/Users/kazuki.morita/.ssh'
 let g:netrw_dirhist_8='/Users/kazuki.morita/Work/private/electron-react-redux-sample/src/js'
+let g:netrw_dirhist_9='/Users/k_morita/.dotfiles/.vim'

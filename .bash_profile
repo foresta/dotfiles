@@ -12,6 +12,8 @@ alias la='ls -al'
 alias ls='ls -G'
 alias cd="cdls"
 
+export PATH="/usr/local/bin:$PATH"
+
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT="$HOME/Library/Cocos2d-x/cocos2d-x-3.9/tools/cocos2d-console/bin"
 export PATH=$COCOS_CONSOLE_ROOT:$PATH

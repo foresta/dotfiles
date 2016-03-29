@@ -46,3 +46,44 @@ set listchars=tab:»-,trail:•,nbsp:%,eol:↲
 
 " lintの設定
 let g:syntastic_javascript_checkers=['eslint']
+
+
+set  nocompatible
+
+" Plugins {{{
+let g:dein#install_max_processed = 48
+augroup PluginInstall
+    autocmd!
+    autocmd VimEnter * if dein#check_install() | call dein#install() | endif
+augroup END
+command! -nargs=0 PluginUpdate call dein#update()
+
+let s:plugin_dir = expand('~/.vim/bundle/')
+let s:dein_dir = s:plugin_dir . 'repos/github.com/Shougo/dein.vim'
+execute 'set runtimepath +=' . s:dein_dir
+
+if !isdirectory(s:dein_dir)
+    call mkdir(s:dein_dir, 'p')
+    silent execute printf('!git clone %s %s', 'https://github.com/Shougo/dein.vim', s:dein_dir)
+endif
+
+if dein#load_state(s:plugin_dir)
+    call dein#begin(s:plugin_dir)
+
+    " golang
+    call dein#add('fatih/vim-go')
+
+    call dein#end()
+    call dein#save_state()
+endif
+
+filetype plugin indent on
+" }}}
+
+" golang
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+
+autocmd FileType go :highlight goErr cterm=bold ctermfg=214
+autocmd FileType go :match goErr /\<err\>/
