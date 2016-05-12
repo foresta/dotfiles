@@ -72,6 +72,8 @@ if dein#load_state(s:plugin_dir)
 
     " golang
     call dein#add('fatih/vim-go')
+    
+    call dein#add('scrooloose/nerdtree')
 
     call dein#end()
     call dein#save_state()
@@ -84,6 +86,20 @@ filetype plugin indent on
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+
+let g:syntastic_go_checkers = ['goling', 'govet', 'errcheck']
+let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['go'] }
 
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214
 autocmd FileType go :match goErr /\<err\>/
+
+
+function! s:dash(...)
+      let word = len(a:000) == 0 ? input('Dash search: ') : a:1
+        call system(printf("open dash://'%s'", word))
+    endfunction
+    command! -nargs=? Dash call <SID>dash(<f-args>)
