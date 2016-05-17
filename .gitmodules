@@ -1,0 +1,12 @@
+[submodule ".vim/bundle/repos/github.com/Shougo/dein.vim"]
+	path = .vim/bundle/repos/github.com/Shougo/dein.vim
+	url = https://github.com/Shougo/dein.vim.git
+[submodule ".vim/bundle/repos/github.com/fatih/vim-go"]
+	path = .vim/bundle/repos/github.com/fatih/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/bundle/repos/github.com/rizzatti/dash.vim"]
+	path = .vim/bundle/repos/github.com/rizzatti/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
+[submodule ".vim/bundle/repos/github.com/scrooloose/nerdtree"]
+	path = .vim/bundle/repos/github.com/scrooloose/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
