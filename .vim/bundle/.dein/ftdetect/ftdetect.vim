@@ -1,3 +1,18 @@
+au BufRead,BufNewFile *.ex,*.exs call s:setf('elixir')
+au BufRead,BufNewFile *.eex call s:setf('eelixir')
+au BufRead,BufNewFile * call s:DetectElixir()
+
+au FileType elixir,eelixir setl sw=2 sts=2 et iskeyword+=!,?
+
+function! s:setf(filetype) abort
+  let &filetype = a:filetype
+endfunction
+
+function! s:DetectElixir()
+  if getline(1) =~ '^#!.*\<elixir\>'
+    call s:setf('elixir')
+  endif
+endfunction
 " We take care to preserve the user's fileencodings and fileformats,
 " because those settings are global (not buffer local), yet we want
 " to override them for loading Go files, which are defined to be UTF-8.

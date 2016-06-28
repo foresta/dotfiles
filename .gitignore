@@ -2,3 +2,5 @@
 .netrwhist
 cache_vim
 state_vim.vim
+temp/
+rollbacks/

@@ -75,6 +75,9 @@ if dein#load_state(s:plugin_dir)
     
     call dein#add('scrooloose/nerdtree')
 
+    " elixir
+    call dein#add('elixir-lang/vim-elixir')
+
     call dein#end()
     call dein#save_state()
 endif
@@ -91,7 +94,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
-let g:syntastic_go_checkers = ['goling', 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['go'] }
 
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214

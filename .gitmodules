@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/repos/github.com/scrooloose/nerdtree"]
 	path = .vim/bundle/repos/github.com/scrooloose/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/repos/github.com/elixir-lang/vim-elixir"]
+	path = .vim/bundle/repos/github.com/elixir-lang/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
