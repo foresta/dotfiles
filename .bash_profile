@@ -26,3 +26,6 @@ export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 export PATH=$PATH:/opt/go/bin
 export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin
+
+# bash auto completion
+source $HOME/.git-completion.bash
