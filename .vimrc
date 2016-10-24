@@ -111,9 +111,15 @@ autocmd FileType go :match goErr /\<err\>/
 " vim-fugitive
 nnoremap <silent> <Space>gb :Gblame<CR>
 nnoremap <silent> <Space>gd :Gdiff<CR>
+nnoremap <silent> <Space>gds :Gdiff HEAD<CR>
+nnoremap <silent> <Space>gdc :Gdiff HEAD~<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
 nnoremap <silent> <Space>ga :Gwrite<CR>
 nnoremap <silent> <Space>gc :Gcommit -v<CR>
+
+" gitv
+nnoremap <silent> <Space>gl :Gitv --all<CR>
+nnoremap <silent> <Space>glc :Gitv!<CR>
 
 function! s:dash(...)
       let word = len(a:000) == 0 ? input('Dash search: ') : a:1
