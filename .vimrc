@@ -1,4 +1,4 @@
-syntax on
+syntax on;
 set t_Co=256
 set term=xterm-256color
 set enc=japan
@@ -35,6 +35,11 @@ inoremap <c-l> <right>
 nnoremap ; :
 nnoremap : ;
 
+" config vimdiff colors
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=52
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 
 set incsearch
 
@@ -78,6 +83,9 @@ if dein#load_state(s:plugin_dir)
     " elixir
     call dein#add('elixir-lang/vim-elixir')
 
+    call dein#add('tpope/vim-fugitive')
+    call dein#add('gregsexton/gitv')
+
     call dein#end()
     call dein#save_state()
 endif
@@ -100,6 +108,12 @@ let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['go'] }
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214
 autocmd FileType go :match goErr /\<err\>/
 
+" vim-fugitive
+nnoremap <silent> <Space>gb :Gblame<CR>
+nnoremap <silent> <Space>gd :Gdiff<CR>
+nnoremap <silent> <Space>gs :Gstatus<CR>
+nnoremap <silent> <Space>ga :Gwrite<CR>
+nnoremap <silent> <Space>gc :Gcommit -v<CR>
 
 function! s:dash(...)
       let word = len(a:000) == 0 ? input('Dash search: ') : a:1

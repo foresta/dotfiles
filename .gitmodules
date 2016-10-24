@@ -13,3 +13,9 @@
 [submodule ".vim/bundle/repos/github.com/elixir-lang/vim-elixir"]
 	path = .vim/bundle/repos/github.com/elixir-lang/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule ".vim/bundle/repos/github.com/tpope/vim-fugitive"]
+	path = .vim/bundle/repos/github.com/tpope/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/repos/github.com/gregsexton/gitv"]
+	path = .vim/bundle/repos/github.com/gregsexton/gitv
+	url = https://github.com/gregsexton/gitv.git
