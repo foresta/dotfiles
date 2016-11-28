@@ -2,7 +2,7 @@ syntax on;
 set t_Co=256
 set term=xterm-256color
 set enc=japan
-let g:hybrid_use_iTerm_colors = 1
+lt g:hybrid_use_iTerm_colors = 1
 
 set tabstop=4
 set autoindent
@@ -116,10 +116,11 @@ nnoremap <silent> <Space>gdc :Gdiff HEAD~<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
 nnoremap <silent> <Space>ga :Gwrite<CR>
 nnoremap <silent> <Space>gc :Gcommit -v<CR>
+nnoremap <silent> <Space>gf :Gfetch<CR>
 
 " gitv
 nnoremap <silent> <Space>gl :Gitv --all<CR>
-nnoremap <silent> <Space>glc :Gitv!<CR>
+nnoremap <silent> <Space>gh :Gitv!<CR>
 
 " nerdtree
 autocmd VimEnter * NERDTree
