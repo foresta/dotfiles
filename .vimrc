@@ -2,7 +2,7 @@ syntax on;
 set t_Co=256
 set term=xterm-256color
 set enc=japan
-lt g:hybrid_use_iTerm_colors = 1
+let g:hybrid_use_iTerm_colors = 1
 
 set tabstop=4
 set autoindent
@@ -77,7 +77,7 @@ if dein#load_state(s:plugin_dir)
 
     " golang
     call dein#add('fatih/vim-go')
-    
+
     call dein#add('scrooloose/nerdtree')
 
     " elixir
