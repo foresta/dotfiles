@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/repos/github.com/gregsexton/gitv"]
 	path = .vim/bundle/repos/github.com/gregsexton/gitv
 	url = https://github.com/gregsexton/gitv.git
+[submodule ".vim/bundle/repos/github.com/Shougo/unite.vim"]
+	path = .vim/bundle/repos/github.com/Shougo/unite.vim
+	url = https://github.com/Shougo/unite.vim
