@@ -88,6 +88,8 @@ if dein#load_state(s:plugin_dir)
     call dein#add('tpope/vim-fugitive')
     call dein#add('gregsexton/gitv')
 
+    call dein#add('Shougo/unite.vim')
+
     call dein#end()
     call dein#save_state()
 endif
@@ -119,6 +121,16 @@ nnoremap <silent> <Space>gs :Gstatus<CR>
 nnoremap <silent> <Space>ga :Gwrite<CR>
 nnoremap <silent> <Space>gc :Gcommit -v<CR>
 nnoremap <silent> <Space>gf :Gfetch<CR>
+
+" unit.vim
+nnoremap <silent> <Space>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+
+" using highway in unite grep
+if executable('hw')
+    let g:unite_source_grep_command = 'hw'
+    let g:unite_source_grep_default_opts = '--no-group --no-color'
+    let g:unite_source_grep_recursive_opt = ''
+endif
 
 " gitv
 nnoremap <silent> <Space>gl :Gitv --all<CR>
