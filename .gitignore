@@ -6,3 +6,4 @@ temp/
 rollbacks/
 .vim/bundle/repos/
 .vim/bundle/.cache/
+.vim/bundle/.dein/
