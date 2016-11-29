@@ -126,13 +126,15 @@ nnoremap <silent> <Space>gf :Gfetch<CR>
 " unite.vim
 nnoremap <silent> <Space>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> <Space>ur :<C-u>Unite file_mru buffer<CR>
-nnoremap <silent> <Space>uf :<C-u>Unite file_rec<CR>
+nnoremap <silent> <Space>uf :<C-u>Unite -start-insert file_rec/async<CR>
 
 " using highway in unite grep
 if executable('hw')
     let g:unite_source_grep_command = 'hw'
     let g:unite_source_grep_default_opts = '--no-group --no-color'
     let g:unite_source_grep_recursive_opt = ''
+
+    let g:unite_source_rec_async_command = ['hw', '--no-group','--no-color']
 endif
 
 " gitv
