@@ -75,6 +75,8 @@ endif
 if dein#load_state(s:plugin_dir)
     call dein#begin(s:plugin_dir)
 
+    call dein#add('Shougo/vimproc.vim', { 'build': 'make' })
+
     " golang
     call dein#add('fatih/vim-go')
 
