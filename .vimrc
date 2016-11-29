@@ -89,6 +89,7 @@ if dein#load_state(s:plugin_dir)
     call dein#add('gregsexton/gitv')
 
     call dein#add('Shougo/unite.vim')
+    call dein#add('Shougo/neomru.vim')
 
     call dein#end()
     call dein#save_state()
@@ -122,8 +123,10 @@ nnoremap <silent> <Space>ga :Gwrite<CR>
 nnoremap <silent> <Space>gc :Gcommit -v<CR>
 nnoremap <silent> <Space>gf :Gfetch<CR>
 
-" unit.vim
+" unite.vim
 nnoremap <silent> <Space>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> <Space>ur :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> <Space>uf :<C-u>Unite file_rec<CR>
 
 " using highway in unite grep
 if executable('hw')
