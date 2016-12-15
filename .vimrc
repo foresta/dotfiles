@@ -1,3 +1,4 @@
+colorscheme iceberg
 syntax on
 set t_Co=256
 set term=xterm-256color
@@ -76,6 +77,7 @@ if dein#load_state(s:plugin_dir)
     call dein#begin(s:plugin_dir)
 
     call dein#add('Shougo/vimproc.vim', { 'build': 'make' })
+    call dein#add('Shougo/neocomplete.vim')
 
     " golang
     call dein#add('fatih/vim-go')
@@ -142,7 +144,23 @@ nnoremap <silent> <Space>gl :Gitv --all<CR>
 nnoremap <silent> <Space>gh :Gitv!<CR>
 
 " nerdtree
-autocmd VimEnter * NERDTree
+nnoremap <silent> <Space>nt :NERDTreeToggle<CR>
+
+" neocomplete
+" 起動時に有効化
+let g:neocomplete#enable_at_startup = 1
+
+" jq
+command! -nargs=? Jq call s:Jq(<f-args>)
+function! s:Jq(...)
+  if 0 == a:0
+    let l:arg = "."
+  else
+    let l:arg = a:1
+  endif
+  execute "%! jq \"" . l:arg . "\""
+endfunction
+
 
 function! s:dash(...)
       let word = len(a:000) == 0 ? input('Dash search: ') : a:1
