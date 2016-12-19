@@ -127,16 +127,21 @@ nnoremap <silent> <Space>gf :Gfetch<CR>
 
 " unite.vim
 nnoremap <silent> <Space>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> <Space>ur :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> <Space>ub :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> <Space>uf :<C-u>Unite -start-insert file_rec/async<CR>
+
+let s:unite_ignore_file_rec_patterns=
+      \ ''
+      \ .'vendor/bundle\|.bundle/\|\.sass-cache/\|'
+      \ .'node_modules/\|bower_components/\|'
+      \ .'\.\(bmp\|gif\|jpe\?g\|png\|webp\|ai\|psd\|tps\|c3b\)"\?$'
+ let g:unite_source_rec_max_cache_files = 5000
 
 " using highway in unite grep
 if executable('hw')
     let g:unite_source_grep_command = 'hw'
     let g:unite_source_grep_default_opts = '--no-group --no-color'
     let g:unite_source_grep_recursive_opt = ''
-
-    let g:unite_source_rec_async_command = ['hw', '--no-group','--no-color']
 endif
 
 " gitv
