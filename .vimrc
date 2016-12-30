@@ -137,6 +137,11 @@ let s:unite_ignore_file_rec_patterns=
       \ .'\.\(bmp\|gif\|jpe\?g\|png\|webp\|ai\|psd\|tps\|c3b\)"\?$'
  let g:unite_source_rec_max_cache_files = 5000
 
+call unite#custom#source(
+      \ 'file_rec/async,file_rec/git',
+      \ 'ignore_pattern',
+      \ s:unite_ignore_file_rec_patterns)
+
 " using highway in unite grep
 if executable('hw')
     let g:unite_source_grep_command = 'hw'
