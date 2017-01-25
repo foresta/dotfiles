@@ -1,15 +1,30 @@
-colorscheme iceberg
+"colorscheme iceberg
+colorscheme hybrid
 syntax on
 set t_Co=256
 set term=xterm-256color
 set enc=japan
 let g:hybrid_use_iTerm_colors = 1
 
+
+"indent
 set tabstop=4
-set autoindent
-set expandtab
 set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autoindent
 set smartindent
+
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.ex setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.exs setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.css setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.scss setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
 
 set nohlsearch
 set cursorline
