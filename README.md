@@ -1,5 +1,8 @@
 # dotfiles
 
+## for OS X
+
+
 ## for ubuntu
 
 install google chrome 
