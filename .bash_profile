@@ -22,6 +22,16 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 export COCOS_TEMPLATES_ROOT="$HOME/Library/Cocos2d-x/cocos2d-x-3.9/templates"
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
+# android
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export ANDROID_NDK_HOME="$HOME/Library/Android/ndk-r12b"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home"
+export NDK_CCACHE="/usr/local/bin/ccache"
+export NDK_ROOT="$HOME/Library/Android/ndk-r12b"
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$NDK_ROOT
+
 # go lang
 export PATH=$PATH:/opt/go/bin
 export GOPATH=$HOME/Work/go
@@ -29,3 +39,9 @@ export PATH=$PATH:$GOPATH/bin
 
 # bash auto completion
 source $HOME/.git-completion.bash
+
+# ruby
+eval "$(rbenv init -)"
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"

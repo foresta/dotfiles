@@ -1,5 +1,5 @@
-"colorscheme iceberg
-colorscheme hybrid
+colorscheme iceberg
+"colorscheme hybrid
 syntax on
 set t_Co=256
 set term=xterm-256color
@@ -24,6 +24,7 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.css setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.scss setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.json setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 set nohlsearch
@@ -58,12 +59,17 @@ highlight DiffChange cterm=bold ctermfg=10 ctermbg=17
 highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 
 set incsearch
+set hlsearch
 
 "TAB,EOFなどを可視化する
 set list
 "set listchars=tab:>-,extends:<,trail:,eol:↩︎
-set listchars=tab:»-,trail:•,nbsp:%,eol:↲
+set listchars=tab:»-,trail:•,nbsp:%,eol:↩︎
 
+" 全角スペースの表示
+highlight ZenkakuSpace cterm=underline ctermbg=red guibg=#666666
+au BufWinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
 
 " lintの設定
 let g:syntastic_javascript_checkers=['eslint']
@@ -107,6 +113,7 @@ if dein#load_state(s:plugin_dir)
 
     call dein#add('Shougo/unite.vim')
     call dein#add('Shougo/neomru.vim')
+    call dein#add('Shougo/unite-outline')
 
     call dein#end()
     call dein#save_state()
@@ -144,6 +151,7 @@ nnoremap <silent> <Space>gf :Gfetch<CR>
 nnoremap <silent> <Space>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> <Space>uf :<C-u>Unite -start-insert file_rec/async<CR>
+nnoremap <silent> <Space>uo :<C-u>Unite -vertical -winwidth=40 outline<CR>
 
 let s:unite_ignore_file_rec_patterns=
       \ ''
