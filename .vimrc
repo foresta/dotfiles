@@ -6,7 +6,6 @@ set term=xterm-256color
 set enc=japan
 let g:hybrid_use_iTerm_colors = 1
 
-
 "indent
 set tabstop=4
 set shiftwidth=4
@@ -115,6 +114,8 @@ if dein#load_state(s:plugin_dir)
     call dein#add('Shougo/neomru.vim')
     call dein#add('Shougo/unite-outline')
 
+    call dein#add('h1mesuke/vim-alignta')
+
     call dein#end()
     call dein#save_state()
 endif
@@ -152,6 +153,10 @@ nnoremap <silent> <Space>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> <Space>uf :<C-u>Unite -start-insert file_rec/async<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite -vertical -winwidth=40 outline<CR>
+
+" vim-alignta
+vnoremap <silent> <Space>aa :<C-u>'<,'>Alignta <- 
+vnoremap <silent> <Space>ae :<C-u>'<,'>Alignta -> 
 
 let s:unite_ignore_file_rec_patterns=
       \ ''
