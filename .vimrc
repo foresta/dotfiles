@@ -150,9 +150,10 @@ nnoremap <silent> <Space>gf :Gfetch<CR>
 
 " unite.vim
 nnoremap <silent> <Space>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> <Space>ub :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> <Space>uu :<C-u>Unite file_mru<CR>
 nnoremap <silent> <Space>uf :<C-u>Unite -start-insert file_rec/async<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite -vertical -winwidth=40 outline<CR>
+nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
 
 " vim-alignta
 vnoremap <silent> <Space>aa :<C-u>'<,'>Alignta <- 
