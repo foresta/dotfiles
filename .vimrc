@@ -1,5 +1,5 @@
 colorscheme iceberg
-"colorscheme hybrid
+colorscheme hybrid
 syntax on
 set t_Co=256
 set term=xterm-256color
@@ -152,9 +152,8 @@ nnoremap <silent> <Space>gf :Gfetch<CR>
 nnoremap <silent> <Space>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> <Space>uu :<C-u>Unite file_mru<CR>
 nnoremap <silent> <Space>uf :<C-u>Unite -start-insert file_rec/async<CR>
-nnoremap <silent> <Space>uo :<C-u>Unite -vertical -winwidth=40 outline<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
-
+nnoremap <silent> <Space>uo :<C-u>Unite -direction=botright -vertical -winwidth=40 outline<CR>
 " vim-alignta
 vnoremap <silent> <Space>aa :<C-u>'<,'>Alignta <- 
 vnoremap <silent> <Space>ae :<C-u>'<,'>Alignta -> 
