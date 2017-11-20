@@ -51,6 +51,3 @@ if [ -f '/Users/k_morita/Library/google-cloud-sdk/path.bash.inc' ]; then source 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/k_morita/Library/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/k_morita/Library/google-cloud-sdk/completion.bash.inc'; fi
-
-# pyenv
-eval "$(pyenv init -)"
