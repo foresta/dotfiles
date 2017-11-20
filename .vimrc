@@ -1,5 +1,6 @@
 colorscheme iceberg
 colorscheme hybrid
+set background=dark
 syntax on
 set t_Co=256
 set term=xterm-256color
