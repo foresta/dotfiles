@@ -51,6 +51,8 @@ inoremap <c-l> <right>
 "NORMALモードの時のキーのリマップ
 nnoremap ; :
 nnoremap : ;
+nnoremap <c-j> :<C-u>call append(expand('.'), '')<Cr>j
+nnoremap <c-k> O<ESC>
 
 " config vimdiff colors
 highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22
@@ -66,7 +68,7 @@ set list
 "set listchars=tab:>-,extends:<,trail:,eol:↩︎
 set listchars=tab:»-,trail:•,nbsp:%,eol:↩︎
 
-" 全角スペースの表示
+" 全角スペースの可視化
 highlight ZenkakuSpace cterm=underline ctermbg=red guibg=#666666
 au BufWinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
 au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
@@ -155,6 +157,7 @@ nnoremap <silent> <Space>uu :<C-u>Unite file_mru<CR>
 nnoremap <silent> <Space>uf :<C-u>Unite -start-insert file_rec/async<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite -direction=botright -vertical -winwidth=40 outline<CR>
+
 " vim-alignta
 vnoremap <silent> <Space>aa :<C-u>'<,'>Alignta <- 
 vnoremap <silent> <Space>ae :<C-u>'<,'>Alignta -> 
