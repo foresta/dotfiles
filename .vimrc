@@ -183,7 +183,9 @@ nnoremap <silent> <Space>gl :Gitv --all<CR>
 nnoremap <silent> <Space>gh :Gitv!<CR>
 
 " nerdtree
+let NERDTreeWinSize=40
 nnoremap <silent> <Space>nt :NERDTreeToggle<CR>
+nnoremap <silent> <Space>nf :NERDTreeFind<CR>
 
 " neocomplete
 " 起動時に有効化
