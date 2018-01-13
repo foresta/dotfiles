@@ -9,7 +9,7 @@ cdls ()
 # alias
 alias ll='ls -l'
 alias la='ls -al'
-alias ls='ls -G'
+alias ls='ls -G --color=auto'
 alias cd="cdls"
 
 export PATH="/usr/local/bin:$PATH"
