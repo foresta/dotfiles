@@ -9,7 +9,6 @@ cdls ()
 # alias
 alias ll='ls -l'
 alias la='ls -al'
-alias ls='ls -G --color=auto'
 alias cd="cdls"
 
 export PATH="/usr/local/bin:$PATH"
@@ -51,3 +50,4 @@ if [ -f '/Users/k_morita/Library/google-cloud-sdk/path.bash.inc' ]; then source 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/k_morita/Library/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/k_morita/Library/google-cloud-sdk/completion.bash.inc'; fi
+eval "$(pyenv init -)"
