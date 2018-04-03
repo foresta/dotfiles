@@ -51,7 +51,6 @@ if [ -f '/Users/k_morita/Library/google-cloud-sdk/path.bash.inc' ]; then source 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/k_morita/Library/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/k_morita/Library/google-cloud-sdk/completion.bash.inc'; fi
-eval "$(pyenv init -)"
 
 # XDG Base Directory Specification
 #    https://wiki.archlinux.jp/index.php/XDG_Base_Directory_%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88
@@ -59,3 +58,8 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
+# python
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="$PYENV_ROOT/versions/anaconda3-4.4.0/bin:$PATH"
