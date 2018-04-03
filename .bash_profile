@@ -33,9 +33,9 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$NDK_ROOT
 
 # go lang
-export PATH=$PATH:/opt/go/bin
 export GOPATH=$HOME/Work/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/$HOME/.goenv/bin
+eval "$(goenv init -)"
 
 # bash auto completion
 source $HOME/.git-completion.bash
