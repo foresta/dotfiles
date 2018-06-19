@@ -34,6 +34,7 @@ export PATH=$PATH:$NDK_ROOT
 
 # go lang
 export GOPATH=$HOME/Work/go
+export PATH=$PATH:/$GOPATH/bin
 export PATH=$PATH:/$HOME/.goenv/bin
 eval "$(goenv init -)"
 
@@ -63,3 +64,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PATH="$PYENV_ROOT/versions/anaconda3-4.4.0/bin:$PATH"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
