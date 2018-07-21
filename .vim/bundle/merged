@@ -1,1 +1,1 @@
-['gitv', 'neocomplete.vim', 'neomru.vim', 'nerdtree', 'nerdtree-git-plugin', 'unite-outline', 'unite.vim', 'vim-alignta', 'vim-elixir', 'vim-fugitive', 'vim-go']
+['fzf.vim', 'gitv', 'neocomplete.vim', 'neomru.vim', 'nerdtree', 'nerdtree-git-plugin', 'unite-outline', 'unite.vim', 'vim-alignta', 'vim-elixir', 'vim-fugitive', 'vim-go']

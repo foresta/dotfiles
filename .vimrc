@@ -103,14 +103,17 @@ if dein#load_state(s:plugin_dir)
     call dein#add('Shougo/vimproc.vim', { 'build': 'make' })
     call dein#add('Shougo/neocomplete.vim')
 
-    " golang
-    call dein#add('fatih/vim-go')
-
+    call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+    call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+    
     call dein#add('scrooloose/nerdtree')
     call dein#add('Xuyuanp/nerdtree-git-plugin')
 
     " elixir
     call dein#add('elixir-lang/vim-elixir')
+
+    " golang
+    call dein#add('fatih/vim-go')
 
     call dein#add('tpope/vim-fugitive')
     call dein#add('gregsexton/gitv')
@@ -163,6 +166,17 @@ nnoremap <silent> <Space>uo :<C-u>Unite -direction=botright -vertical -no-quit -
 " vim-alignta
 vnoremap <silent> <Space>aa :<C-u>'<,'>Alignta <- 
 vnoremap <silent> <Space>ae :<C-u>'<,'>Alignta -> 
+
+" FZF
+set rtp+=/usr/local/bin/fzf
+set rtp+=~/.fzf
+let g:fzf_buffers_jump = 1
+let g:fzf_layout = { 'window': '20split enew' }
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+nnoremap <silent> <Space>fb :Buffers<CR>
+nnoremap <silent> <Space>ft :Tags<CR>
+nnoremap <silent> <Space>ff :Files<CR>
+nnoremap <silent> <C-]> :call fzf#vim#tags(expand('<cword>'))<CR>
 
 let s:unite_ignore_file_rec_patterns=
       \ ''
