@@ -107,6 +107,7 @@ if dein#load_state(s:plugin_dir)
     call dein#add('fatih/vim-go')
 
     call dein#add('scrooloose/nerdtree')
+    call dein#add('Xuyuanp/nerdtree-git-plugin')
 
     " elixir
     call dein#add('elixir-lang/vim-elixir')
@@ -187,6 +188,7 @@ nnoremap <silent> <Space>gl :Gitv --all<CR>
 nnoremap <silent> <Space>gh :Gitv!<CR>
 
 " nerdtree
+let NERDTreeShowHidden=1
 let NERDTreeWinSize=40
 nnoremap <silent> <Space>nt :NERDTreeToggle<CR>
 nnoremap <silent> <Space>nf :NERDTreeFind<CR>

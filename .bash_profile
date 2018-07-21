@@ -34,8 +34,8 @@ export PATH=$PATH:$NDK_ROOT
 
 # go lang
 export GOPATH=$HOME/Work/go
-export PATH=$PATH:/$GOPATH/bin
-export PATH=$PATH:/$HOME/.goenv/bin
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/.goenv/bin
 eval "$(goenv init -)"
 
 # bash auto completion
@@ -46,6 +46,9 @@ eval "$(rbenv init -)"
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# yarn
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/k_morita/Library/google-cloud-sdk/path.bash.inc' ]; then source '/Users/k_morita/Library/google-cloud-sdk/path.bash.inc'; fi
@@ -68,3 +71,5 @@ export PATH="$PYENV_ROOT/versions/anaconda3-4.4.0/bin:$PATH"
 # nvm
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
