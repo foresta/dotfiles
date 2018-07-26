@@ -1,5 +1,7 @@
 colorscheme iceberg
-colorscheme hybrid
+"colorscheme hybrid
+"colorscheme solarized
+"colorscheme codedark
 set background=dark
 syntax on
 set t_Co=256
