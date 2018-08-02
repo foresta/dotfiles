@@ -109,6 +109,8 @@ if dein#load_state(s:plugin_dir)
     call dein#add('scrooloose/nerdtree')
     call dein#add('Xuyuanp/nerdtree-git-plugin')
 
+    call dein#add('luochen1990/rainbow')
+
     " elixir
     call dein#add('elixir-lang/vim-elixir')
 
@@ -130,6 +132,9 @@ endif
 
 filetype plugin indent on
 " }}}
+
+" rainbow
+let g:rainbow_active = 1
 
 " golang
 let g:go_highlight_functions = 1
