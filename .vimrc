@@ -126,6 +126,8 @@ if dein#load_state(s:plugin_dir)
     call dein#add('Shougo/neomru.vim')
     call dein#add('Shougo/unite-outline')
 
+    call dein#add('yuttie/comfortable-motion.vim')
+
     call dein#add('h1mesuke/vim-alignta')
 
     call dein#end()
@@ -228,6 +230,10 @@ function! s:Jq(...)
   endif
   execute "%! jq \"" . l:arg . "\""
 endfunction
+
+" comfortable-motion
+let g:comfortable_motion_scroll_down_key = "j"
+let g:comfortable_motion_scroll_up_key = "k"
 
 
 function! s:dash(...)
