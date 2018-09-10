@@ -119,6 +119,9 @@ if dein#load_state(s:plugin_dir)
     " golang
     call dein#add('fatih/vim-go')
 
+    " elm
+    call dein#add('elmcast/elm-vim')
+
     call dein#add('tpope/vim-fugitive')
     call dein#add('gregsexton/gitv')
 
@@ -154,6 +157,17 @@ let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['go'] }
 
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214
 autocmd FileType go :match goErr /\<err\>/
+
+" elm
+"let g:elm_jump_to_error = 0
+"let g:elm_make_output_file = "elm.js"
+"let g:elm_make_show_warnings = 0
+"let g:elm_syntastic_show_warnings = 0
+"let g:elm_browser_command = ""
+"let g:elm_detailed_complete = 0
+"let g:elm_format_autosave = 1
+"let g:elm_format_fail_silently = 0
+"let g:elm_setup_keybindings = 1
 
 " vim-fugitive
 nnoremap <silent> <Space>gb :Gblame<CR>
