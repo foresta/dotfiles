@@ -1,5 +1,5 @@
 colorscheme iceberg
-"colorscheme hybrid
+colorscheme hybrid
 "colorscheme solarized
 "colorscheme codedark
 set background=dark
