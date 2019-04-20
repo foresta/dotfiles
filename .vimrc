@@ -1,7 +1,6 @@
 colorscheme iceberg
 colorscheme hybrid
-"colorscheme solarized
-"colorscheme codedark
+
 set background=dark
 syntax on
 set t_Co=256
@@ -121,6 +120,9 @@ if dein#load_state(s:plugin_dir)
 
     " elm
     call dein#add('elmcast/elm-vim')
+
+    " kotlin
+    call dein#add('udalov/kotlin-vim')
 
     call dein#add('tpope/vim-fugitive')
     call dein#add('gregsexton/gitv')

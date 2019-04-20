@@ -6,11 +6,14 @@ cdls ()
     \cd "$@" && ls
 }
 
-# alias
+##
+## alias
+##
 alias ll='ls -l'
 alias la='ls -al'
 alias ls='ls -G'
 alias cd="cdls"
+
 
 export PATH="/usr/local/bin:$PATH"
 
@@ -32,44 +35,71 @@ export NDK_ROOT="$HOME/Library/Android/ndk-r12b"
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$NDK_ROOT
 
+##
+## Language Settings
+##
+
 # go lang
 export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.goenv/bin
 eval "$(goenv init -)"
 
-# bash auto completion
-source $HOME/.git-completion.bash
-
-# ruby
+# Ruby
 eval "$(rbenv init -)"
 
-# rust
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# yarn
-export PATH="$HOME/.yarn/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/k_morita/Library/google-cloud-sdk/path.bash.inc' ]; then source '/Users/k_morita/Library/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/k_morita/Library/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/k_morita/Library/google-cloud-sdk/completion.bash.inc'; fi
-
-# XDG Base Directory Specification
-#    https://wiki.archlinux.jp/index.php/XDG_Base_Directory_%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_CACHE_HOME=$HOME/.cache
-export XDG_DATA_HOME=$HOME/.local/share
-
-# python
+# Python
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PATH="$PYENV_ROOT/versions/anaconda3-4.4.0/bin:$PATH"
 
-# nvm
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# JavaScript
+## yarn
+export PATH="$HOME/.yarn/bin:$PATH"
+
+## nvm
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+##
+## bash auto completion
+##
+
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+source "$HOME/.git-completion.bash"
+source "$BASH_COMPLETION_COMPAT_DIR/git-flow-completion.bash"
+
+
+##
+## XDG Base Directory Specification
+##    https://wiki.archlinux.jp/index.php/XDG_Base_Directory_%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88
+##
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+#test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+#export PATH="/newspicks/bin:$PATH"
+#export JENV_ROOT="/newspicks/opt/jenv"
+#export PATH="/newspicks/opt/jenv:$PATH"
+#eval "$(jenv init -)"
+#export NODEBREW_ROOT="/newspicks/opt/nodebrew"
+#export PATH="/newspicks/opt/nodebrew/current/bin:$PATH"
+#export LDFLAGS="-L/newspicks/opt/libffi/lib"
+#export PKG_CONFIG_PATH="/newspicks/opt/libffi/lib/pkgconfig"
+#LDFLAGS="-L/newspicks/opt/llvm/lib -Wl,-rpath,/newspicks/opt/llvm/lib"
+#export PATH="/newspicks/opt/llvm/bin:$PATH"
+#export LDFLAGS="-L/newspicks/opt/llvm/lib"
+#export CPPFLAGS="-I/newspicks/opt/llvm/include"
+#export PATH="/newspicks/opt/llvm/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kazuki.morita/Library/GCloud/google-cloud-sdk/path.bash.inc' ]; then . '/Users/kazuki.morita/Library/GCloud/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kazuki.morita/Library/GCloud/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/kazuki.morita/Library/GCloud/google-cloud-sdk/completion.bash.inc'; fi

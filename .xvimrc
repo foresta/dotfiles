@@ -67,13 +67,6 @@ set backspace=indent,eol,start
 set vb t_vb=
 
 
-" [env]
-
-let $CACHE = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
-let $CONFIG = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HOME
-let $DATA = empty($XDG_DATA_HOME) ? expand('$HOME/.local/share') : $XDG_DATA_HOME
-
-
 " ===========
 " Editor
 " ===========
@@ -96,50 +89,20 @@ au WinEnter * let w:m3 = matchadd("EmSpace", '　')
 nnoremap ; :
 nnoremap : ;
 
+nnoremap <Space>r :run<CR>
+nnoremap <Space>b :xcmenucmd Build<CR>
+nnoremap <Space>c :xcmenucmd Clean<CR>
+nnoremap <Space>e :xccmd openQuickly<CR>
+nnoremap <C-o> :xccmd goBackInHistoryByCommand<Cr>
+nnoremap <C-i> :xccmd goForwardInHistoryByCommand<Cr>
+nnoremap <C-n> :xcmenucmd Jump to Next Issue<Cr>
+nnoremap <C-p> :xcmenucmd Jump to Previous Issue<Cr>
+nnoremap <C-N> :xcmenucmd Fix Next Issue<Cr>
+nnoremap <C-P> :xcmenucmd Fix Previous Issue<Cr>
+
 inoremap <c-d> <delete>
 inoremap <c-j> <down>
 inoremap <c-k> <up>
 inoremap <c-h> <left>
 inoremap <c-l> <right>
-
-
-" ===========
-" Plugins
-" ===========
-
-augroup PluginInstall
-    autocmd!
-    autocmd VimEnter * if dein#check_install() | call dein#install() | endif
-augroup END
-command! -nargs=0 PluginUpdate call dein#update()
-
-let s:dein_dir = expand('$DATA/dein')
-
-if &runtimepath !~# '/dein.vim'
-    let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo.dein.vim'
-
-    if !isdirectory(s:dein_repo_dir)
-        execute printf('!git clone %s %s', 'https://github.com/Shougo/dein.vim', s:dein_repo_dir)
-    endif
-
-    execute 'set runtimepath^=' . s:dein_repo_dir
-endif
-
-let g:dein#install_pax_processed = 48
-
-let s:toml_file = '~/.config/nvim/dein.toml'
-let s:toml_lazy_file = '~/.config/nvim/dein_lazy.toml'
-if dein#load_state(s:dein_dir)
-    call dein#begin(s:dein_dir)
-
-    call dein#load_toml(s:toml_file, {'lazy': 0})
-    call dein#load_toml(s:toml_lazy_file, {'lazy': 1})
-
-    call dein#end()
-    call dein#save_state()
-endif
-
-filetype plugin indent on
-
-"""
 
