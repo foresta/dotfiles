@@ -63,7 +63,6 @@ fi
 # Python
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$PYENV_ROOT/versions/anaconda3-4.4.0/bin:$PATH"
 if existsCmd pyenv; then
     eval "$(pyenv init -)"
 else
