@@ -1,9 +1,12 @@
 # user name
 PS1='\W > '
 
-cdls ()
-{
+cdls () {
     \cd "$@" && ls
+}
+
+existsCmd () {
+    type -a $1 > /dev/null 2>&1
 }
 
 ##
@@ -43,16 +46,29 @@ export PATH=$PATH:$NDK_ROOT
 export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.goenv/bin
-eval "$(goenv init -)"
+
+if existsCmd goenv; then 
+    eval "$(goenv init -)"
+else
+    echo "goenv is not installed."
+fi
 
 # Ruby
-eval "$(rbenv init -)"
+if existsCmd rbenv; then
+    eval "$(rbenv init -)"
+else 
+    echo "rbenv is not installed."
+fi
 
 # Python
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 export PATH="$PYENV_ROOT/versions/anaconda3-4.4.0/bin:$PATH"
+if existsCmd pyenv; then
+    eval "$(pyenv init -)"
+else
+    echo "pyenv is not installed."
+fi
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
