@@ -90,7 +90,12 @@ fi
 
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 . "$HOME/.git-completion.bash"
-. "$BASH_COMPLETION_COMPAT_DIR/git-flow-completion.bash"
+
+if [ -f "$BASH_COMPLETION_COMPAT_DIR/git-flow-completion.bash"]; then
+    . "$BASH_COMPLETION_COMPAT_DIR/git-flow-completion.bash"
+fi
+
+
 
 
 ##
