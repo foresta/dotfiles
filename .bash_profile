@@ -89,8 +89,8 @@ fi
 ##
 
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-source "$HOME/.git-completion.bash"
-source "$BASH_COMPLETION_COMPAT_DIR/git-flow-completion.bash"
+. "$HOME/.git-completion.bash"
+. "$BASH_COMPLETION_COMPAT_DIR/git-flow-completion.bash"
 
 
 ##
