@@ -20,6 +20,10 @@ alias cd="cdls"
 
 export PATH="/usr/local/bin:$PATH"
 
+##
+## Language Settings
+##
+
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT="$HOME/Library/Cocos2d-x/cocos2d-x-3.17/tools/cocos2d-console/bin"
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
@@ -28,7 +32,7 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 export COCOS_TEMPLATES_ROOT="$HOME/Library/Cocos2d-x/cocos2d-x-3.17/templates"
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
-# android
+# Android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export ANDROID_NDK_HOME="$HOME/Library/Android/ndk-r12b"
@@ -38,9 +42,9 @@ export NDK_ROOT="$HOME/Library/Android/ndk-r12b"
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$NDK_ROOT
 
-##
-## Language Settings
-##
+# Flutter
+export FLUTTER_PATH="$HOME/Library/Flutter/flutter/bin"
+export PATH=$PATH:$FLUTTER_PATH
 
 # go lang
 export GOPATH=$HOME/Work/go
@@ -83,7 +87,6 @@ if [ -f '/usr/local/opt/nvm/nvm.sh' ]; then
 fi
 
 
-
 ##
 ## bash auto completion
 ##
@@ -96,8 +99,6 @@ if [ -f "$BASH_COMPLETION_COMPAT_DIR/git-flow-completion.bash" ]; then
 fi
 
 
-
-
 ##
 ## XDG Base Directory Specification
 ##    https://wiki.archlinux.jp/index.php/XDG_Base_Directory_%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88
@@ -105,21 +106,6 @@ fi
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
-
-#test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-#export PATH="/newspicks/bin:$PATH"
-#export JENV_ROOT="/newspicks/opt/jenv"
-#export PATH="/newspicks/opt/jenv:$PATH"
-#eval "$(jenv init -)"
-#export NODEBREW_ROOT="/newspicks/opt/nodebrew"
-#export PATH="/newspicks/opt/nodebrew/current/bin:$PATH"
-#export LDFLAGS="-L/newspicks/opt/libffi/lib"
-#export PKG_CONFIG_PATH="/newspicks/opt/libffi/lib/pkgconfig"
-#LDFLAGS="-L/newspicks/opt/llvm/lib -Wl,-rpath,/newspicks/opt/llvm/lib"
-#export PATH="/newspicks/opt/llvm/bin:$PATH"
-#export LDFLAGS="-L/newspicks/opt/llvm/lib"
-#export CPPFLAGS="-I/newspicks/opt/llvm/include"
-#export PATH="/newspicks/opt/llvm/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kazuki.morita/Library/GCloud/google-cloud-sdk/path.bash.inc' ]; then . '/Users/kazuki.morita/Library/GCloud/google-cloud-sdk/path.bash.inc'; fi
