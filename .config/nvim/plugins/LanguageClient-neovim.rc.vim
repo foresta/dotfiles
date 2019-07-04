@@ -4,6 +4,7 @@ set hidden
 let g:LanguageClient_serverCommands = {
             \ 'cpp': ['clangd'],
             \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+            \ 'vue': ['vls'],
             \ }
 
 augroup LanguageClient_config
