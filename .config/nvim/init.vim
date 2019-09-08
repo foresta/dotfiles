@@ -40,6 +40,7 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.scss setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.json setlocal tabstop=2 softtabstop=2 shiftwidth=2
+"    autocmd BufNewFile,BufRead *.re setlocal noexpandtab
 augroup END
 
 

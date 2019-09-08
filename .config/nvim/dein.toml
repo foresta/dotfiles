@@ -103,3 +103,9 @@ repo = 'dNitro/vim-pug-complete'
 hook_add = '''
 source ~/.config/nvim/plugins/vim-pug-complete.rc.vim
 '''
+
+[[plugins]]
+repo = 'fatih/vim-go'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-go.rc.vim
+'''
