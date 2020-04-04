@@ -1,0 +1,28 @@
+2019-11-01 00:40:49,166 DEBUG    root            Running [gcloud] with arguments: [-v: "None"]
+2019-11-01 00:40:49,166 DEBUG    root            Loaded Command Group: [u'gcloud', u'version']
+2019-11-01 00:40:49,168 DEBUG    root            Running [gcloud.version] with arguments: []
+2019-11-01 00:40:49,186 INFO     root            Display format: "flattened[no-pad,separator=" "]"
+2019-11-01 00:40:49,187 INFO     ___FILE_ONLY___ Google Cloud SDK
+2019-11-01 00:40:49,187 INFO     ___FILE_ONLY___  
+2019-11-01 00:40:49,187 INFO     ___FILE_ONLY___ 231.0.0
+
+2019-11-01 00:40:49,187 INFO     ___FILE_ONLY___ beta
+2019-11-01 00:40:49,187 INFO     ___FILE_ONLY___  
+2019-11-01 00:40:49,187 INFO     ___FILE_ONLY___ 2019.01.19
+
+2019-11-01 00:40:49,187 INFO     ___FILE_ONLY___ bq
+2019-11-01 00:40:49,187 INFO     ___FILE_ONLY___  
+2019-11-01 00:40:49,187 INFO     ___FILE_ONLY___ 2.0.40
+
+2019-11-01 00:40:49,188 INFO     ___FILE_ONLY___ core
+2019-11-01 00:40:49,188 INFO     ___FILE_ONLY___  
+2019-11-01 00:40:49,188 INFO     ___FILE_ONLY___ 2019.01.19
+
+2019-11-01 00:40:49,188 INFO     ___FILE_ONLY___ gsutil
+2019-11-01 00:40:49,188 INFO     ___FILE_ONLY___  
+2019-11-01 00:40:49,188 INFO     ___FILE_ONLY___ 4.35
+
+2019-11-01 00:40:49,189 INFO     ___FILE_ONLY___ Updates are available for some Cloud SDK components.  To install them,
+please run:
+  $ gcloud components update
+2019-11-01 00:40:49,196 DEBUG    root            Metrics reporting process started...

@@ -1,0 +1,15 @@
+2019-11-01 00:41:07,501 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth']
+2019-11-01 00:41:07,503 ERROR    root            (gcloud.auth) Command name argument expected.
+2019-11-01 00:41:07,508 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'activate_refresh_token']
+2019-11-01 00:41:07,513 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'revoke']
+2019-11-01 00:41:07,519 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'docker_helper']
+2019-11-01 00:41:07,521 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'print_refresh_token']
+2019-11-01 00:41:07,524 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'describe']
+2019-11-01 00:41:07,526 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'list']
+2019-11-01 00:41:07,530 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'git_helper']
+2019-11-01 00:41:07,534 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'activate_service_account']
+2019-11-01 00:41:07,540 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'login']
+2019-11-01 00:41:07,542 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'configure_docker']
+2019-11-01 00:41:07,544 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'print_access_token']
+2019-11-01 00:41:07,546 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'application_default']
+2019-11-01 00:41:07,562 DEBUG    root            Metrics reporting process started...

@@ -201,6 +201,8 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 nnoremap <silent> <Space>fb :Buffers<CR>
 nnoremap <silent> <Space>ft :Tags<CR>
 nnoremap <silent> <Space>ff :Files<CR>
+nnoremap <silent> <Space>fx :Commands<CR>
+nnoremap <silent> <Space>fg :GFiles<CR>
 nnoremap <silent> <C-]> :call fzf#vim#tags(expand('<cword>'))<CR>
 
 let s:unite_ignore_file_rec_patterns=

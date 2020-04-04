@@ -1,5 +1,6 @@
 [core]
     excludesfile = /Users/kazuki.morita/.gitignore_global
+	editor = nvim
 [user]
 	name = kz_morita
 	email = kz.morit@gmail.com

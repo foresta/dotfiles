@@ -83,6 +83,9 @@ repo = 'leafgarland/typescript-vim'
 
 
 [[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
+
+[[plugins]]
 repo = 'vim-syntastic/syntastic'
 hook_add = '''
 source ~/.config/nvim/plugins/syntastic.rc.vim
@@ -92,6 +95,12 @@ source ~/.config/nvim/plugins/syntastic.rc.vim
 repo = 'mtscout6/syntastic-local-eslint.vim'
 hook_add = '''
 source ~/.config/nvim/plugins/syntastic-local-eslint.rc.vim
+'''
+
+[[plugins]]
+repo = 'jaxbot/syntastic-react'
+hook_add = '''
+source ~/.config/nvim/plugins/syntastic-react.rc.vim
 '''
 
 [[plugins]]

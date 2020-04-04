@@ -19,6 +19,7 @@ alias cd="cdls"
 
 
 export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 ##
 ## Language Settings
@@ -32,11 +33,21 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 export COCOS_TEMPLATES_ROOT="$HOME/Library/Cocos2d-x/cocos2d-x-3.17/templates"
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JENV_ROOT="$HOME/.jenv"
+export PATH="$JENV_ROOT/bin:$PATH"
+if existsCmd jenv; then
+    eval "$(jenv init -)"
+else
+    echo "jenv is not installed"
+fi
+
+
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export ANDROID_NDK_HOME="$HOME/Library/Android/ndk-r12b"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home"
 export NDK_CCACHE="/usr/local/bin/ccache"
 export NDK_ROOT="$HOME/Library/Android/ndk-r12b"
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
@@ -49,7 +60,8 @@ export PATH=$PATH:$FLUTTER_PATH
 # go lang
 export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/.goenv/bin
+export GOENV_ROOT=$HOME/.goenv
+export PATH=$PATH:$GOENV_ROOT/bin
 
 if existsCmd goenv; then 
     eval "$(goenv init -)"
@@ -112,3 +124,4 @@ if [ -f '/Users/kazuki.morita/Library/GCloud/google-cloud-sdk/path.bash.inc' ]; 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kazuki.morita/Library/GCloud/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/kazuki.morita/Library/GCloud/google-cloud-sdk/completion.bash.inc'; fi
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
