@@ -12,6 +12,8 @@
   IME > プロパティ > 詳細設定 > 編集操作 > 変更(D) > Ctrl + SPACE でIME ON/OFF 切り替え
 - Launcher
   http://keypirinha.com/
+- Magic trackpad を使う場合は以下をインストール（有料）
+  https://magicutilities.net/download
 
 ## for OS X
 
