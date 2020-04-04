@@ -34,3 +34,11 @@ sudo apt-get install google-chrome-stable
 ```
 $ LANG=C xdg-user-dirs-gtk-update
 ```
+
+### Capslock to Ctrl
+
+`XKBOPTIONS="ctrl:nocaps"`
+
+sudo nano /etc/default/keyboard
+
+
