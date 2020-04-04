@@ -41,4 +41,48 @@ $ LANG=C xdg-user-dirs-gtk-update
 
 sudo nano /etc/default/keyboard
 
+### Update packages
+```
+$ sudo apt update & sudo apt upgrade -y
+```
 
+### Install neovim
+
+#### Install python build tools
+```
+$ sudo apt install build-essential libbz2-dev libdb-dev \
+  libreadline-dev libffi-dev libgdbm-dev liblzma-dev \
+  libncursesw5-dev libsqlite3-dev libssl-dev \
+  zlib1g-dev uuid-dev tk-dev
+```
+
+
+#### Install pyenv
+```
+$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+```
+
+```
+$ git clone https://github.com/foresta/dotfiles ~/work/.dotfiles 
+$ cd ~/work/.dotfiles
+$ ./install.sh
+$ source ~/.bash_profile
+```
+
+```
+$ pyenv -v
+```
+
+#### Install neovim
+
+##### python neovim
+```
+$ pip install neovim
+```
+##### neovim
+
+```
+$ sudo add-apt-repository ppa:neovim-ppa/stable
+$ sudo apt-get update
+$ sudo apt-get install neovim
+```
