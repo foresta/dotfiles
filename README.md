@@ -10,6 +10,8 @@
   https://forest.watch.impress.co.jp/library/software/changekey/
 - IME 切り替え 
   IME > プロパティ > 詳細設定 > 編集操作 > 変更(D) > Ctrl + SPACE でIME ON/OFF 切り替え
+- Launcher
+  http://keypirinha.com/
 
 ## for OS X
 
