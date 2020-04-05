@@ -92,3 +92,102 @@ $ sudo apt-get install neovim
 sudo apt install xsel
 ```
 
+### Install docker
+
+Install packages for adding repository
+```
+$ sudo apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+```
+
+Add Docker GPG key
+```
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+Add repository
+```
+$ sudo add-apt-repository \
+     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+     $(lsb_release -cs) \
+     stable"
+```
+
+Update apt package
+```
+sudo apt update
+```
+
+Install docker
+```
+$  sudo apt install -y docker-ce
+```
+
+Exec
+```
+$ sudo systemctl status docker
+```
+
+Exec docker for normal user
+```
+$ cat /etc/group | grep docker
+> docker:x:999:
+
+$ sudo gpasswd -a kz_morita docker
+
+
+$ cat /etc/group | grep docker
+> docker:x:999:kz_morita
+
+
+$ sudo chmod 666 /var/run/docker.sock
+```
+
+### Install docker-compose
+
+
+```
+$ export compose='1.25.1'
+
+$ sudo curl -L https://github.com/docker/compose/releases/download/${compose}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+$ sudo chmod 0755 /usr/local/bin/docker-compose
+
+$ docker-compose -v
+```
+
+### Install Hugo
+
+```
+# Check hugo version
+$ snap info hugo
+
+# instlal hugo
+$ sudo snap install hugo
+```
+
+### Install nvm
+
+https://github.com/nvm-sh/nvm#install-script
+
+```
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+
+Add settings to `.bashrc`
+```
+# nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+```
+
+
+Add settings to `.profile`
+```
+## nvm
+export NVM_DIR="$HOME/.nvm"
+```
+

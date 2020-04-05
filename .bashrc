@@ -186,12 +186,18 @@ if existsCmd /usr/libexec/java_home; then
 fi
 
 ######################
-# git completions
+# completions
 ######################
+
+# git
 if [ ! -d '/etc/bash_completion.d' ]; then
     source "$HOME/.git-completion.bash"
     source "$HOME/.git-prompt.sh"
 fi
+
+# nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ######################
 # prompt

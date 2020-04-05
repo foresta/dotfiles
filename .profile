@@ -95,6 +95,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 ## yarn
 export PATH="$HOME/.yarn/bin:$PATH"
 
+## nvm
+export NVM_DIR="$HOME/.nvm"
 
 ##########################
 # XDG Base Directory Specification
