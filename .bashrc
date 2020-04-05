@@ -124,13 +124,12 @@ fi
 # Custom Settings
 #############################################
 
-if [ -n "$ENV_SETUP_DONE"]; then
+if [ -n "$ENV_SETUP_DONE" ]; then
     # load .profile if not setup yet
     if [ -f ~/.profile ]; then 
         . ~/.profile
     fi
 fi
-
 
 # cdls
 cdls () {
@@ -144,6 +143,7 @@ existsCmd () {
 
 
 alias cd="cdls"
+alias pbcopy="xsel --clipboard --input"
 
 
 ######################
@@ -190,11 +190,7 @@ fi
 if [ ! -d '/etc/bash_completion.d' ]; then
     source "$HOME/.git-completion.bash"
     source "$HOME/.git-prompt.sh"
-    echo "uuuuuuu"
-else 
-    echo "hu-----"
 fi
-
 
 ######################
 # prompt

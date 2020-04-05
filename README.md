@@ -86,3 +86,9 @@ $ sudo add-apt-repository ppa:neovim-ppa/stable
 $ sudo apt-get update
 $ sudo apt-get install neovim
 ```
+### Setup pbcopy
+
+```
+sudo apt install xsel
+```
+
