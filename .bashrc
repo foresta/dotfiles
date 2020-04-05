@@ -143,6 +143,7 @@ existsCmd () {
 
 
 alias cd="cdls"
+alias ls="ls -G"
 alias pbcopy="xsel --clipboard --input"
 
 
