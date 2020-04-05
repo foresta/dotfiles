@@ -191,3 +191,14 @@ Add settings to `.profile`
 export NVM_DIR="$HOME/.nvm"
 ```
 
+### Install fcitx
+
+for toggle IME on ctrl
+
+```
+$ sudo apt install fcitx fcitx-mozc
+
+$ sudo reboot
+```
+
+fcitx 設定 > 全体の設定 > 入力メソッドのオンオフ > LCtrl
