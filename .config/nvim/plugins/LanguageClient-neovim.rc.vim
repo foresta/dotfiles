@@ -5,6 +5,11 @@ let g:LanguageClient_serverCommands = {
             \ 'cpp': ['clangd'],
             \ 'rust': ['rust-analyzer'],
             \ 'vue': ['vls'],
+            \ 'elm': ['elm-language-server'],
+            \ }
+
+let g:LanguageClient_rootMarkers = {
+            \ 'elm': ['elm.json'],
             \ }
 
 " 'rust': ['rustup', 'run', 'nightly', 'rls'],

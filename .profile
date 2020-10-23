@@ -99,6 +99,13 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
 ##########################
+# Deno
+##########################
+export DENO_INSTALL="/home/kz_morita/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+ 
+
+##########################
 # XDG Base Directory Specification
 #    https://wiki.archlinux.jp/index.php/XDG_Base_Directory_%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88
 ##########################
