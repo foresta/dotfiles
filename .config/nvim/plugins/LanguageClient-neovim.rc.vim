@@ -3,10 +3,12 @@ set hidden
 " settings for languages
 let g:LanguageClient_serverCommands = {
             \ 'cpp': ['clangd'],
-            \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+            \ 'rust': ['rust-analyzer'],
             \ 'vue': ['vls'],
             \ }
 
+" 'rust': ['rustup', 'run', 'nightly', 'rls'],
+"
 augroup LanguageClient_config
     autocmd!
     autocmd User LanguageClientStarted setlocal signcolumn=yes
