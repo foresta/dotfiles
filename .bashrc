@@ -144,8 +144,11 @@ existsCmd () {
 
 alias cd="cdls"
 alias ls="ls -G"
-alias pbcopy="xsel --clipboard --input"
-
+if existsCmd pbcopy; then
+    echo "pbcopy installed"
+else
+    alias pbcopy="xsel --clipboard --input"
+fi
 
 ######################
 # xenv
