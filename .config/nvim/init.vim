@@ -9,6 +9,12 @@ set background=dark
 syntax on
 set t_On=256
 
+" transparent background
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none 
 
 " [UI]
 
