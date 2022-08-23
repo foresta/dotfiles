@@ -2,6 +2,7 @@ nmap <silent> <Space>cd <Plug>(coc-definition)
 nmap <silent> <Space>cy <Plug>(coc-type-definition)
 nmap <silent> <Space>ci <Plug>(coc-implementation)
 nmap <silent> <Space>cr <Plug>(coc-references)
+nmap <silent> <Space>ca <Plug>(coc-codeaction)
 
 nmap <silent> <Space>def <Plug>(coc-definition)
 nmap <silent> <Space>tdef <Plug>(coc-type-definition)
