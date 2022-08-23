@@ -86,7 +86,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 ##########################
 # Rust
 ##########################
-export PATH="$HOME/.cargo/bin:$PATH"
 
 
 ##########################
@@ -118,3 +117,4 @@ export XDG_DATA_HOME=$HOME/.local/share
 ##########################
 export PATH="$HOME/.bin:$PATH"
 
+. "$HOME/.cargo/env"

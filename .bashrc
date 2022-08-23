@@ -144,10 +144,20 @@ existsCmd () {
 
 alias cd="cdls"
 alias ls="ls -G"
-if existsCmd pbcopy; then
+if [ "$(uname)" == 'Darwin' ]; then
+    # for macos
     echo "pbcopy installed"
+elif [ "$(uname)" == 'Linux' ]; then
+    if [[ "$(uname -r)" == *microsoft* ]]; then
+        # for wsl
+        alias pbcopy='clip.exe'
+    else
+        # for linux
+        alias pbcopy="xsel --clipboard --input"
+    fi
 else
-    alias pbcopy="xsel --clipboard --input"
+    # for windows
+    alias pbcopy='clip.exe'
 fi
 
 ######################
@@ -173,7 +183,8 @@ fi
 
 # pyenv
 if existsCmd pyenv; then
-    eval "$(pyenv init -)"
+    echo "[EXEC] pyenv init"
+    eval "$(pyenv init --path)"
 fi
 
 # nvm
@@ -186,6 +197,13 @@ fi
 ######################
 if existsCmd /usr/libexec/java_home; then
     export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+fi
+
+######################
+# Linuxbrew 
+######################
+if existsCmd /home/linuxbrew/.linuxbrew/bin/brew; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
 ######################
@@ -214,3 +232,8 @@ GIT_PS1_SHOWSTASHSTATE=1
 export PS1='\[\033[1;32m\]\u\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;31m\]$(__git_ps1)\[\033[00m\] \$ '
 
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+. "$HOME/.cargo/env"
